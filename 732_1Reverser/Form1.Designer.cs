@@ -28,53 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.InputTextBox = new System.Windows.Forms.TextBox();
-            this.ProcessButton = new System.Windows.Forms.Button();
-            this.Output = new System.Windows.Forms.Label();
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.SuspendLayout();
+            InputTextBox = new TextBox();
+            ProcessButton = new Button();
+            Output = new Label();
+            helpProvider1 = new HelpProvider();
+            SuspendLayout();
             // 
             // InputTextBox
             // 
-            this.InputTextBox.Location = new System.Drawing.Point(55, 71);
-            this.InputTextBox.Name = "InputTextBox";
-            this.InputTextBox.Size = new System.Drawing.Size(472, 31);
-            this.InputTextBox.TabIndex = 0;
-            this.InputTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            InputTextBox.Location = new Point(72, 91);
+            InputTextBox.Margin = new Padding(4);
+            InputTextBox.Name = "InputTextBox";
+            InputTextBox.Size = new Size(612, 39);
+            InputTextBox.TabIndex = 0;
+            InputTextBox.TextChanged += textBox1_TextChanged;
             // 
             // ProcessButton
             // 
-            this.ProcessButton.Location = new System.Drawing.Point(55, 285);
-            this.ProcessButton.Name = "ProcessButton";
-            this.ProcessButton.Size = new System.Drawing.Size(472, 117);
-            this.ProcessButton.TabIndex = 1;
-            this.ProcessButton.Text = "Развернуть";
-            this.ProcessButton.UseVisualStyleBackColor = true;
-            this.ProcessButton.Click += new System.EventHandler(this.ProcessButton_Click);
+            ProcessButton.Location = new Point(70, 314);
+            ProcessButton.Margin = new Padding(4);
+            ProcessButton.Name = "ProcessButton";
+            ProcessButton.Size = new Size(614, 150);
+            ProcessButton.TabIndex = 1;
+            ProcessButton.Text = "Развернуть";
+            ProcessButton.UseVisualStyleBackColor = true;
+            ProcessButton.Click += ProcessButton_Click;
             // 
             // Output
             // 
-            this.Output.AutoSize = true;
-            this.Output.Location = new System.Drawing.Point(183, 182);
-            this.Output.Name = "Output";
-            this.Output.Size = new System.Drawing.Size(191, 25);
-            this.Output.TabIndex = 2;
-            this.Output.Text = "Здесь будет результат";
+            Output.AutoSize = true;
+            Output.Location = new Point(238, 233);
+            Output.Margin = new Padding(4, 0, 4, 0);
+            Output.Name = "Output";
+            Output.Size = new Size(259, 32);
+            Output.TabIndex = 2;
+            Output.Text = "Здесь будет результат";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 450);
-            this.Controls.Add(this.Output);
-            this.Controls.Add(this.ProcessButton);
-            this.Controls.Add(this.InputTextBox);
-            this.Name = "MainForm";
-            this.Text = "732-1 Reverser";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(723, 568);
+            Controls.Add(Output);
+            Controls.Add(ProcessButton);
+            Controls.Add(InputTextBox);
+            Margin = new Padding(4);
+            Name = "MainForm";
+            Text = "732-1 Reverser";
+            FormClosing += MainForm_FormClosing;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
